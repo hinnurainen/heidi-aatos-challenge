@@ -56,7 +56,9 @@ Also, the chosen city should be passed to the WeatherDataSection component as a 
 
 ### 6. Sunrise and sunset
 
-The same api call that we use to get the current weather also gives us information regarding sunset and sunnrise. Using this data, create a new component that informs the user what time the sunsets and rises, and how long the day is. You may use an external npm library to date/time calculations and formatting if you wish.
+The same api call that we use to get the current weather also gives us information regarding sunset and sunrise. Using this data, create a new component that informs the user what time the sunsets and rises, and how long the day is ( i.e. difference between sunset and sunrise, you can decide how precise you'd like to show this information). You may use an external npm library to date/time calculations (for example: [date-fns](https://date-fns.org/)).
+
+Hint: The api returns the sunrise and sunset data in unix time. In order to convert it to a Javascript Date object you need to multiply it with 1000 e.g. `new Date(sunrise * 1000)`;
 
 
 ### 7. Create a digital clock
@@ -64,7 +66,13 @@ The same api call that we use to get the current weather also gives us informati
 Add a "digital clock" that informs the user what date and time it is at the moment. Time should include seconds. The clock should update automatically when the time passes.
 
 
+## The final result
 
+The final result should look something like this
+
+![example2](example2.png "Example2")
+
+Feel free to make it prettier than the example if you want :)
 
 ## Available Scripts
 
