@@ -1,5 +1,13 @@
 # Aatos Coding Challennge
 
+## Libraries/tech used
+
+You don't need to know all of these beforehand, we've tried to keep things simple enough to be found from the documentation easily.
+
+- [React](https://reactjs.org/), using React [Hooks API](https://reactjs.org/docs/hooks-intro.html)
+- [TypeScript](https://www.typescriptlang.org/docs/)
+- [Ant Design](https://ant.design/components/overview/)
+
 ## Prerequisites
 
 * An [openweathermap](http://openweathermap.org/) API key.
@@ -13,6 +21,21 @@ REACT_APP_API_KEY=your-api-key-here
 ```
 
 You may read more about the usage of `.env.development.local` from [here](https://create-react-app.dev/docs/adding-custom-environment-variables/) if interested, but basically it allows you to create environment variables that are evaluated and embedded at the build time (i.e. when you run `yarn start`).
+
+## Running the project
+
+Install dependencies
+```
+yarn
+# or 
+npm install
+```
+Run project
+```
+yarn start
+# or
+npm run start
+```
 
 
 
