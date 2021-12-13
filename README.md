@@ -1,5 +1,13 @@
 # Aatos Coding Challennge
 
+## Libraries/tech used
+
+You don't need to know all of these beforehand, we've tried to keep things simple enough to be found from the documentation easily.
+
+- [React](https://reactjs.org/), using React [Hooks API](https://reactjs.org/docs/hooks-intro.html)
+- [TypeScript](https://www.typescriptlang.org/docs/)
+- [Ant Design](https://ant.design/components/overview/)
+
 ## Prerequisites
 
 * An [openweathermap](http://openweathermap.org/) API key.
