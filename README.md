@@ -20,11 +20,11 @@ You may read more about the usage of `.env.development.local` from [here](https:
 
 ### 1. Make it compile
 
-Something seems of... Find what is causing the application to crash on start
+Something seems off... Find what is causing the application to crash on start
 
 ### 2. Where's the data?
 
-At the moment there's no data to show. Use the provided `getWeatherFromApi` function and fetch the weather data when the `Weather` component is mounnted the first time.
+At the moment there's no data to show. Use the provided `getWeatherFromApi` function and fetch the weather data when the `Weather` component is mounted the first time.
 
 ### 3. Add some columns
 
