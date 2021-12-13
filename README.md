@@ -61,10 +61,15 @@ The same api call that we use to get the current weather also gives us informati
 Hint: The api returns the sunrise and sunset data in unix time. In order to convert it to a Javascript Date object you need to multiply it with 1000 e.g. `new Date(sunrise * 1000)`;
 
 
-### 7. Create a digital clock
+### 7. Show the weather forecast
 
-Add a "digital clock" that informs the user what date and time it is at the moment. Time should include seconds. The clock should update automatically when the time passes.
+Use the provided `getWeatherForecast` function to fetch the 7 day weather forecast for the given city. Show the following information regarding the forecast:
 
+* Minimum temperature
+* Maximum temperature
+* Average temperature
+
+The temperatures should be shown up to a precision of 1 decimal, so for example -1.9031 would be shown as -1.9. To get the temperature for a given day, you can use the `getTemperatureForDay` to parse it from an object in the forecast array.
 
 ## The final result
 
