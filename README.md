@@ -22,6 +22,21 @@ REACT_APP_API_KEY=your-api-key-here
 
 You may read more about the usage of `.env.development.local` from [here](https://create-react-app.dev/docs/adding-custom-environment-variables/) if interested, but basically it allows you to create environment variables that are evaluated and embedded at the build time (i.e. when you run `yarn start`).
 
+## Running the project
+
+Install dependencies
+```
+yarn
+# or 
+npm install
+```
+Run project
+```
+yarn start
+# or
+npm run start
+```
+
 
 
 ## The Challenge
