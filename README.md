@@ -12,7 +12,7 @@ You don't need to know all of these beforehand, we've tried to keep things simpl
 
 * An [openweathermap](http://openweathermap.org/) API key.
 
-Create an account to openweathermap.org (it's free) and create an API key. Create a file called `.env.development.local` in the root directory. Note that it may take several hours for the API key to be enabled after you have created it.
+Create an account to openweathermap.org (it's free) and create an API key. Create a file called `.env.development.local` in the root directory. Note that it may take several hours for the API key to be enabled after you have created it (but usually it should be enabled soon after creating it).
 
 with the following content (add your own api key)
 
@@ -49,7 +49,7 @@ Something seems off... Find what is causing the application to crash on start
 
 At the moment there's no data to show. Use the provided `getWeatherFromApi` function and fetch the weather data when the `Weather` component is mounted the first time.
 
-**IMPORTANT NOTE:** The OpenWeatherMap API has a limit of 60 requests per minute. Be careful not to accidentally make an infinite loop that spams the API so your OpenWeatherMap account won't get blocked. If your account gets blocked, you won't be able to make any more requests. If that happens, you have to make a new account and update your API key in `.env.development.local` and restart the project. Note that it may take several hours for OpenWeather to enable a new API key after you have created it.
+**IMPORTANT NOTE:** The OpenWeatherMap API has a limit of 60 requests per minute. Be careful not to accidentally make an infinite loop that spams the API so your OpenWeatherMap account won't get blocked. If your account gets blocked, you won't be able to make any more requests. If that happens, you have to make a new account and update your API key in `.env.development.local` and restart the project. Note that it may take several hours for OpenWeather to enable a new API key after you have created it (but usually it should be enabled soon after creating it).
 
 ### 3. Add some columns
 
