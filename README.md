@@ -54,7 +54,7 @@ At the moment there's no data to show. Use the provided `getWeatherFromApi` func
 We'll be using a design system called Antd Design. Use Ant Design's Grid system to modify the view to show data in two columns (example below)
 
 Hints:
-* [Ant Design Documentation]<https://ant.design/components/overview/>
+* [Ant Design Documentation](https://ant.design/components/overview/)
 
 ![example](example.png "Example")
 
