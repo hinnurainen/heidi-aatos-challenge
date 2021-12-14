@@ -1,4 +1,4 @@
-# Aatos Coding Challennge
+# Aatos Coding Challenge
 
 ## Libraries/tech used
 
