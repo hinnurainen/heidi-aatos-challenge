@@ -73,8 +73,10 @@ const Weather: React.FunctionComponent = () => {
     return <p>No data</p>;
   }
   return (
+    <>
     <Typography.Title>Current Weather</Typography.Title>
     <WeatherDataSection weatherData={weatherData} />
+    </>
   );
 };
 
