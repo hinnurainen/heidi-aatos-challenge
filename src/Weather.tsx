@@ -1,5 +1,5 @@
 import "./Weather.css";
-import React from "react";
+import React , {useEffect} from "react";
 import { Typography } from "antd";
 
 interface WeatherData {
@@ -56,17 +56,23 @@ const getWeatherForecast = async (city: string): Promise<DayEntry[]> => {
   return dailyForecast;
 };
 
-const getWeatherFromApi = async (): Promise<WeatherData> => {
-  const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=Helsinki&appid=${process.env.REACT_APP_API_KEY}`
-  );
-  const data = await response.json();
-  const weather = data.weather[0];
-  return weather;
-};
+
 
 const Weather: React.FunctionComponent = () => {
-  const [weatherData] = React.useState<WeatherData | undefined>(undefined);
+  const [weatherData, setWeatherData] = React.useState<WeatherData | undefined>(undefined);
+
+  useEffect(() => {
+    const getWeatherFromApi = async (): Promise<WeatherData> => {
+      const response = await fetch(
+        `http://api.openweathermap.org/data/2.5/weather?q=Helsinki&appid=${process.env.REACT_APP_API_KEY}`
+      );
+      const data = await response.json();
+      const weather = data.weather[0];
+      console.log(data);
+      return weather;
+    };
+    getWeatherFromApi();
+  }, []);
 
 
   if (!weatherData) {
