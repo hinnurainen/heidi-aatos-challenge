@@ -1,5 +1,5 @@
 import "./Weather.css";
-import React , {useEffect} from "react";
+import React , {useState, useEffect} from "react";
 import { Row, Col, Typography } from "antd";
 import WeatherDataSection from "./WeatherDataSection";
 
@@ -43,19 +43,21 @@ const getWeatherForecast = async (city: string): Promise<DayEntry[]> => {
 
 const Weather: React.FunctionComponent = () => {
   const [weatherData, setWeatherData] = React.useState<WeatherData | undefined>(undefined);
+  const [city, setCity] = useState('Helsinki');
 
   useEffect(() => {
     const getWeatherFromApi = async (): Promise<void> => {
       const response = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=Helsinki&appid=${process.env.REACT_APP_API_KEY}`
+        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}`
       );
       const data = await response.json();
       const weather = data.weather[0];
       console.log(data);
       setWeatherData(weather);
+      setCity('Turku');
     };
     getWeatherFromApi();
-  }, []);
+  }, [city]);
 
 
   if (!weatherData) {
@@ -64,7 +66,7 @@ const Weather: React.FunctionComponent = () => {
   return (
     <>
     <Typography.Title>Current Weather</Typography.Title>
-    <WeatherDataSection weatherData={weatherData} />
+    <WeatherDataSection weatherData={weatherData} city={city}/>
     </>
   );
 };
